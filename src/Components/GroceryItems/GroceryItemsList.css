@@ -1,0 +1,9 @@
+.grocery-items-list {
+  list-style: none;
+  padding: 0;
+}
+
+.grocery-items-list__fallback {
+  color: white;
+  text-align: center;
+}
