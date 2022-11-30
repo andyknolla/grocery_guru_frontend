@@ -1,4 +1,4 @@
-import './NewItem.css';
+import '../styles/NewItem.css';
 
 const NewItemOption = (props) => {
   function toggle() {

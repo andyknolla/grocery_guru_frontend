@@ -4,7 +4,7 @@ import ItemsList from './ItemsList';
 // import ExpensesChart from './ExpensesChart';
 
 import Card from '../../Shared/UI/Card';
-import './Items.css';
+import '../styles/Items.css';
 
 const Items = (props) => {
   // const [filterValue, setFilterValue] = useState('all');

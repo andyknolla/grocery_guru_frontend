@@ -1,5 +1,5 @@
 import Item from './Item';
-import './ItemsList.css';
+import '../styles/ItemsList.css';
 
 const ItemsList = (props) => {
   if (props.filteredItems.length === 0) {

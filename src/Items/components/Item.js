@@ -1,4 +1,4 @@
-import './Item.css';
+import '../styles/Item.css';
 import Card from '../../Shared/UI/Card';
 
 const Item = (props) => (

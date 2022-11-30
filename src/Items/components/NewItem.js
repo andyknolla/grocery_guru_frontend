@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NewItemForm from './NewItemform';
 import NewItemOption from './NewItemOption';
 
-import './NewItem.css';
+import '../styles/NewItem.css';
 
 const NewItem = (props) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
