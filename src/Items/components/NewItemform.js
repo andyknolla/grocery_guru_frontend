@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './NewGroceryItemForm.css';
+import './NewItemForm.css';
 
-const NewExpenseForm = (props) => {
+const NewItemForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
@@ -71,4 +71,4 @@ const NewExpenseForm = (props) => {
   );
 };
 
-export default NewExpenseForm;
+export default NewItemForm;

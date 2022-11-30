@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import GroceryItems from './Components/GroceryItems/GroceryItems';
-import NewGroceryItem from "./Components/NewGroceryItems/NewGroceryItem";
+import Items from './Items/components/Items';
+import NewItem from "./Items/components/NewItem";
 
-const DUMMY_GROCERY_ITEMS = [
+const DUMMY_ITEMS = [
   {
     id: 'e1',
-    title: 'Toilet Paper',
+    title: 'Bread',
     amount: 94.12,
     date: new Date(2020, 7, 14),
   },
@@ -25,18 +25,18 @@ const DUMMY_GROCERY_ITEMS = [
 ];
 
 function App() {
-  const [groceryItems, setGroceryItems] = useState(DUMMY_GROCERY_ITEMS);
+  const [items, setItems] = useState(DUMMY_ITEMS);
 
-  const handleAddGroceryItem = function (newExpense) {
-    setGroceryItems((prevState) => {
+  const handleAddItem = function (newExpense) {
+    setItems((prevState) => {
       return [newExpense, ...prevState];
     });
   };
 
   return (
     <div>
-      <NewGroceryItem onAddItem={handleAddGroceryItem} />
-      <GroceryItems groceryItems={groceryItems} />
+      <NewItem onAddItem={handleAddItem} />
+      <Items items={items} />
     </div>
   );
 }

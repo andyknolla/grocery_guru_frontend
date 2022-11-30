@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import NewGroceryItemForm from './NewGroceryItemform';
-import NewGroceryItemOption from './NewGroceryItemOption';
+import NewItemForm from './NewItemform';
+import NewItemOption from './NewItemOption';
 
-import './NewGroceryItem.css';
+import './NewItem.css';
 
-const NewGroceryItem = (props) => {
+const NewItem = (props) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
 
   function toggleFormHandler(bool) {
@@ -20,15 +20,15 @@ const NewGroceryItem = (props) => {
   }
 
   return (
-    <div className='new-expense'>
+    <div className='new-item'>
       {showAddItemForm ? (
-        <NewGroceryItemForm
+        <NewItemForm
           onSaveItemData={handleItemUpdate}
           showAddItemForm={showAddItemForm}
           onToggle={toggleFormHandler}
         />
       ) : (
-        <NewGroceryItemOption
+        <NewItemOption
           showItemForm={showAddItemForm}
           onToggle={toggleFormHandler}
         />
@@ -37,4 +37,4 @@ const NewGroceryItem = (props) => {
   );
 };
 
-export default NewGroceryItem;
+export default NewItem;

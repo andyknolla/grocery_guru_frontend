@@ -1,12 +1,12 @@
 import { useState } from 'react';
 // import ExpensesFilter from '../ExpensesFilter';
-import GroceryItemsList from './GroceryItemsList';
+import ItemsList from './ItemsList';
 // import ExpensesChart from './ExpensesChart';
 
-import Card from '../UI/Card';
-import './GroceryItems.css';
+import Card from '../../Shared/UI/Card';
+import './Items.css';
 
-const GroceryItems = (props) => {
+const Items = (props) => {
   // const [filterValue, setFilterValue] = useState('all');
 
 /*   function handleFilterUpdate(data) {
@@ -27,10 +27,10 @@ const GroceryItems = (props) => {
           onUpdateFilter={handleFilterUpdate}
         />
         <ExpensesChart expenses={filteredExpenses} />
- */}        <GroceryItemsList filteredItems={props.groceryItems} />
+ */}        <ItemsList filteredItems={props.items} />
       </Card>
     </div>
   );
 };
 
-export default GroceryItems;
+export default Items;
