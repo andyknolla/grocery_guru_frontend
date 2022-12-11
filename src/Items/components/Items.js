@@ -4,7 +4,7 @@ import ItemsList from './ItemsList';
 // import ExpensesChart from './ExpensesChart';
 
 import Card from '../../Shared/UI/Card';
-import '../styles/Items.css';
+import styles from '../styles/Items.module.css';
 
 const Items = (props) => {
   // const [filterValue, setFilterValue] = useState('all');
@@ -21,7 +21,7 @@ const Items = (props) => {
  */
   return (
     <div>
-      <Card className='grocery-items'>
+      <Card className={styles.items}>
 {/*         <ExpensesFilter
           filterValue={filterValue}
           onUpdateFilter={handleFilterUpdate}

@@ -1,12 +1,12 @@
 import Item from './Item';
-import '../styles/ItemsList.css';
+import styles from '../styles/ItemsList.module.css';
 
 const ItemsList = (props) => {
   if (props.filteredItems.length === 0) {
-    return <h2 className='items-list__fallback'>No items found.</h2>;
+    return <h2 className={styles.items_list__fallback}>No items found.</h2>;
   } else {
     return (
-      <ul className='items-list'>
+      <ul className={styles.items_list}>
         {props.filteredItems.map((item) => (
           <Item
             key={item.id}

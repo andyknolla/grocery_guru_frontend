@@ -1,4 +1,4 @@
-import '../styles/NewItem.css';
+import styles from '../styles/NewItem.module.css';
 
 const NewItemOption = (props) => {
   function toggle() {
@@ -6,7 +6,7 @@ const NewItemOption = (props) => {
   }
 
   return (
-    <div className='new-item-option'>
+    <div className={styles.new_item_option}>
       <button onClick={toggle}>Add an item</button>
     </div>
   );

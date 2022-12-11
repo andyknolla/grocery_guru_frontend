@@ -1,12 +1,13 @@
-import '../styles/Item.css';
 import Card from '../../Shared/UI/Card';
+
+import styles from '../styles/Item.module.css';
 
 const Item = (props) => (
   <li>
-    <Card className='item'>
-      <div className='item__description'>
+    <Card className={styles.item}>
+      <div className={styles.item__description}>
         <h2>{props.title}</h2>
-        <div className='item__price'>{props.amount}</div>
+        <div className={styles.item__price}>{props.amount}</div>
       </div>
     </Card>
   </li>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import '../styles/NewItemForm.css';
+import styles from '../styles/NewItemForm.module.css';
 
 const NewItemForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -35,8 +35,8 @@ const NewItemForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className='new-item__controls'>
-        <div className='new-item__control'>
+      <div className={styles.new_item__controls}>
+        <div className={styles.new_item__control}>
           <label>Title</label>
           <input
             type='text'
@@ -44,7 +44,7 @@ const NewItemForm = (props) => {
             value={enteredTitle}
           ></input>
         </div>
-        <div className='new-item__control'>
+        <div className={styles.new_item__control}>
           <label>Amount</label>
           <input
             type='number'
@@ -54,7 +54,7 @@ const NewItemForm = (props) => {
             onChange={amountChangeHandler}
           ></input>
         </div>
-        <div className='new-item__control'>
+        <div className={styles.new_item__control}>
           <label>Date</label>
           <input
             type='date'
@@ -63,7 +63,7 @@ const NewItemForm = (props) => {
           ></input>
         </div>
       </div>
-      <div className='new-item__actions'>
+      <div className={styles.new_item__actions}>
         <button onClick={toggleHandler}>Cancel</button>
         <button type='submit'>Enter Expense</button>
       </div>

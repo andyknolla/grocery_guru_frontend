@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NewItemForm from './NewItemform';
 import NewItemOption from './NewItemOption';
 
-import '../styles/NewItem.css';
+import styles from '../styles/NewItem.module.css';
 
 const NewItem = (props) => {
   const [showAddItemForm, setShowAddItemForm] = useState(false);
@@ -20,7 +20,7 @@ const NewItem = (props) => {
   }
 
   return (
-    <div className='new-item'>
+    <div className={styles.new_item}>
       {showAddItemForm ? (
         <NewItemForm
           onSaveItemData={handleItemUpdate}

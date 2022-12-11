@@ -1,4 +1,4 @@
-.new-item, .new-item-option {
+.new_item, .new_item_option {
   background-color: #a892ee;
   padding: 1rem;
   margin: 2rem auto;
@@ -8,11 +8,11 @@
   text-align: center;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
-.new-item-option {
+.new_item_option {
   box-shadow: none;
 }
 
-.new-item button {
+.new_item button {
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
@@ -23,19 +23,19 @@
   margin-right: 1rem;
 }
 
-.new-item button:hover,
-.new-item button:active {
+.new_item button:hover,
+.new_item button:active {
   background-color: #510674;
   border-color: #510674;
 }
 
-.new-item button.alternative {
+.new_item button.alternative {
   color: #220131;
   border-color: transparent;
   background-color: transparent;
 }
 
-.new-item button.alternative:hover,
-.new-item button.alternative:active {
+.new_item button.alternative:hover,
+.new_item button.alternative:active {
   background-color: #ddb3f8;
 }
