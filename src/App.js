@@ -1,6 +1,14 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 import { useState } from 'react';
 import Items from './Items/components/Items';
-import NewItem from "./Items/components/NewItem";
+import NewItem from './Items/components/NewItem';
+import Users from './User/pages/Users';
+import NewUser from './User/pages/NewUser';
 
 const DUMMY_ITEMS = [
   {
@@ -24,8 +32,27 @@ const DUMMY_ITEMS = [
   },
 ];
 
+const DUMMY_USERS = [
+  {
+    id: 1,
+    name: 'Jeni',
+    location: 'Boulder',
+  },
+  {
+    id: 2,
+    name: 'Jaimie',
+    location: 'Denver',
+  },
+  {
+    id: 3,
+    name: 'Mike',
+    location: 'Denver',
+  },
+];
+
 function App() {
   const [items, setItems] = useState(DUMMY_ITEMS);
+  const [users, setUsers] = useState(DUMMY_USERS);
 
   const handleAddItem = function (newExpense) {
     setItems((prevState) => {
@@ -33,11 +60,42 @@ function App() {
     });
   };
 
+  const handleAddUser = function (newUser) {
+    var uniqueId = Math.random().toString();
+    newUser.id = uniqueId;
+
+    setUsers((prevState) => {
+      return [newUser, ...prevState];
+    });
+  };
+
   return (
-    <div>
-      <NewItem onAddItem={handleAddItem} />
-      <Items items={items} />
-    </div>
+    <Router>
+      <Switch>
+        <Route
+          path='/users'
+          exact
+        >
+          <Users users={users} />
+        </Route>
+        <Route path='/user/new'>
+          <NewUser
+            users={users}
+            onAddUser={handleAddUser}
+          />
+        </Route>
+        <Route
+          path='/items'
+          exact
+        >
+          <div>
+            <NewItem onAddItem={handleAddItem} />
+            <Items items={items} />
+          </div>
+        </Route>
+        <Redirect to='/' />
+      </Switch>
+    </Router>
   );
 }
 
